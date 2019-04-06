@@ -1,7 +1,16 @@
-2- Git Phases(Modifiying --> Staging --> Commiting --> Pushing)
+## Git Phases(Modifiying --> Staging --> Commiting --> Pushing)
+-----------------------------------------------------------
+1. TO CONFIGURE USERNAME AND PASSWORD
+- git config --global user.name <your name>
+- git config --global user.email <your email>
 -----------------------------------------------------------
 
-1. PUSHING YOUR PROJECT INTO THE REMOTE REPO:
+2- TO SEE YOUR USERNAME AND EMAIL CONFIGURATION:
+- git user.name
+- git user.email
+-----------------------------------------------------------
+
+3. PUSHING YOUR PROJECT INTO THE REMOTE REPO:
 - git init 
 - git remote add origin <repo-url>
 - git add .
@@ -9,18 +18,65 @@
 - git push -u origin master
 -----------------------------------------------------------
 
-2. Modifiying --> Staging
+4. TO CLONE REMOTE REPO INTO LOCAL REPO:
+- git clone <remote- repo-url>
+-----------------------------------------------------------
+
+5. SEE THE STATUS OF YOUT BRANCH:
+- git status
+-----------------------------------------------------------
+
+6. Modifiying --> Staging
 - git add .
 -----------------------------------------------------------
 
-3- Staging --> Commit
+7. Staging--> Modifiying 
+- git reset
+-----------------------------------------------------------
+
+8. Staging --> Commit
 git commit -m " commit message"
 -----------------------------------------------------------
 
-4- Commiting --> Pushing 
+9. Commiting --> Pushing 
 - git push origin <branch name>
 -----------------------------------------------------------
 
+10.  TO SEE ALL COMMITS AND AUTHORS:
+- git log
+- git log --oneline
+-----------------------------------------------------------
 
+11. TO ROLLOUT INT O THE PREVOIUS VERSION IN THE PROJECT:
+- git checkout -b fix rebuild <commit-id>
+- git branch -d fix-rebuild 
+-----------------------------------------------------------
+
+12. TO SEE PREVIOUS COMMITS:
+- git checkout <commit-id> or master to be in the last commit 
+- git revert
+- git reset <commit-id> / delete all commits  after this commit prermenentally
+- git reset --hard  master~2
+-----------------------------------------------------------
+
+13. TO SEE ALL THE BRANCHES:
+- git branch
+-----------------------------------------------------------
+
+14. TO CREATE NEW BRANCH & MOVE TO THAT BRNACH & MERGE TO THE MASTER:
+- git branch <branch name>
+- git checkout <branch name>
+- git merge <branch name>
+-----------------------------------------------------------
+
+15. PUTTING FILES INTO .GITIGNORE
+- git touch <file name>
+-----------------------------------------------------------
+
+16. TO REMOVE FILES:
+- git rm <file name> (-f)
+-----------------------------------------------------------
+
+17. 
 
 
