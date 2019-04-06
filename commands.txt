@@ -1,1 +1,26 @@
-first initialzation
+2- Git Phases(Modifiying --> Staging --> Commiting --> Pushing)
+-----------------------------------------------------------
+
+1. PUSHING YOUR PROJECT INTO THE REMOTE REPO:
+- git init 
+- git remote add origin <repo-url>
+- git add .
+- git commit -m "commit message"
+- git push -u origin master
+-----------------------------------------------------------
+
+2. Modifiying --> Staging
+- git add .
+-----------------------------------------------------------
+
+3- Staging --> Commit
+git commit -m " commit message"
+-----------------------------------------------------------
+
+4- Commiting --> Pushing 
+- git push
+-----------------------------------------------------------
+
+
+
+
