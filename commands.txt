@@ -1,16 +1,23 @@
-## Git Phases(Modifiying --> Staging --> Commiting --> Pushing)
+## Git Phases(Modifiying --> Staging --> Head --> Remote)
+## Untracked file: created but didn't added to git
+## Modified file: added  ot git but the changes on this files didn't added yet
 -----------------------------------------------------------
-1. TO CONFIGURE USERNAME AND PASSWORD
+1. TO SEE REPO THAT YOU ARE WORKING IN:
+- git remote -v
+-----------------------------------------------------------
+
+2. TO CONFIGURE USERNAME AND PASSWORD
 - git config --global user.name <your name>
 - git config --global user.email <your email>
 -----------------------------------------------------------
 
-2- TO SEE YOUR USERNAME AND EMAIL CONFIGURATION:
+3. TO SEE YOUR USERNAME AND EMAIL CONFIGURATION AND ALL OTHER CONFIGURATIONS:
 - git user.name
 - git user.email
+- git config --list
 -----------------------------------------------------------
 
-3. PUSHING YOUR PROJECT INTO THE REMOTE REPO:
+4. PUSHING YOUR PROJECT INTO THE REMOTE REPO:
 - git init 
 - git remote add origin <repo-url>
 - git add .
@@ -18,11 +25,11 @@
 - git push -u origin master
 -----------------------------------------------------------
 
-4. TO CLONE REMOTE REPO INTO LOCAL REPO:
+5. TO CLONE REMOTE REPO INTO LOCAL REPO:
 - git clone <remote- repo-url>
 -----------------------------------------------------------
 
-5. SEE THE STATUS OF YOUT BRANCH:
+6. SEE THE STATUS OF YOUT BRANCH:
 - git status
 -----------------------------------------------------------
 
@@ -32,22 +39,28 @@
 
 7. Staging--> Modifiying 
 - git reset
+- git rm --cached <file name>
 -----------------------------------------------------------
 
-8. Staging --> Commit
+8. Staging --> Head
 git commit -m " commit message"
 -----------------------------------------------------------
 
-9. Commiting --> Pushing 
+9. Head--> Remote
 - git push origin <branch name>
 -----------------------------------------------------------
 
-10.  TO SEE ALL COMMITS AND AUTHORS:
+10. TO SEE ALL COMMITS AND AUTHORS:
 - git log
 - git log --oneline
+- git log --author=Eman
+- git log --pretty=oneline
+- git log --graph --oneline --decorate --all
+- git log --name-status	// see only which files have changes
+- git log --help
 -----------------------------------------------------------
 
-11. TO ROLLOUT INT O THE PREVOIUS VERSION IN THE PROJECT:
+11. TO ROLLOUT INTO THE PREVOIUS VERSION IN THE PROJECT:
 - git checkout -b fix rebuild <commit-id>
 - git branch -d fix-rebuild 
 -----------------------------------------------------------
@@ -57,26 +70,87 @@ git commit -m " commit message"
 - git revert
 - git reset <commit-id> / delete all commits  after this commit prermenentally
 - git reset --hard  master~2
+- git reset --soft <commit-id>
 -----------------------------------------------------------
 
 13. TO SEE ALL THE BRANCHES:
 - git branch
+- git brranch -a 
+- git branch -av
 -----------------------------------------------------------
 
 14. TO CREATE NEW BRANCH & MOVE TO THAT BRNACH & MERGE TO THE MASTER:
 - git branch <branch name>
 - git checkout <branch name>
+- git checkout -b  <branch name> / (2*1) steps 
 - git merge <branch name>
+- git branch -d <branch name> // delete specific branch 
+-----------------------------------------------------------
+15. DELETING SPECIFIC BRANCH:
+- git push origin  --delete <branch Name> / Remotly
+- git branch -D <brnach name>
+-----------------------------------------------------------
+19. SHOW DIFFERRENCE BETWEEN TWO BRANCHES:
+-  git diff<source-branch> < target-branch>
 -----------------------------------------------------------
 
-15. PUTTING FILES INTO .GITIGNORE
-- git touch <file name>
+15. CREATE NEW FILE 
+- touch <file name.ext>
 -----------------------------------------------------------
 
 16. TO REMOVE FILES:
 - git rm <file name> (-f)
 -----------------------------------------------------------
 
-17. 
+17. TO GENERATE SSH KEY FOR SPECOFOC USER:
+- ssh-keygen -t rsa -C lemooo.smart@yahoo.com  (eman)--> copy paste form file to github SSH
+- ssh -T git@github.com
+-----------------------------------------------------------
+ 
+17. CLEAR ALL COMMANDS
+- clear
+-----------------------------------------------------------
 
+18. LIST ALL CONTENT WITH PERMISSIONS:
+- ls -ltr
+-----------------------------------------------------------
 
+20.  CREATE TAG FOR COMMIT TO BE  A RELEASE NUMBER:
+- git tag 1.0.0  <commit-id>
+-----------------------------------------------------------
+
+21. REPLACE LOCAL CHANGES WITH HEAD:
+- git checkout <file name>
+-----------------------------------------------------------
+
+22. REPLACE LOCAL CHANGES WITH REMOTE SERVER:
+- git fetch origin
+- git reset --hard orign/master
+- git reset --hard orign/<branch name>
+-----------------------------------------------------------
+
+23. BUILT-IN GUI
+- gitk
+-----------------------------------------------------------
+
+24. COLORFUL GIT OUTPUT
+- git config color.ui true
+-----------------------------------------------------------
+
+25. SHOW LOG ON JUST ONE LINE PER COMMIT:
+- git config format.pretty oneline
+-----------------------------------------------------------
+
+26. USE INTERACTIVE ADDING:
+- git add -i
+----------------------------------------------------------- 
+
+- cd 
+- mkdir
+- pwd 
+- srart .
+- code .
+- notepad <file name> 
+- ls 
+- cls
+- 
